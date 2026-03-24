@@ -9,6 +9,10 @@ class Ayg < Formula
       url "https://github.com/hemeda3/aygrep/releases/download/v0.1.0/ayg-macos-arm64"
       sha256 "8288034527cb46b881b8844f3b0ba889aebbb1be6768e5e04b8ddd429132d462"
     end
+    on_intel do
+      url "https://github.com/hemeda3/aygrep/releases/download/v0.1.0/ayg-macos-amd64"
+      sha256 "41af12f2585c95d6a4240e20e0fa70e7ed009b3f77ac264d501316156c8ec8ef"
+    end
   end
 
   on_linux do
@@ -19,11 +23,7 @@ class Ayg < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "ayg-macos-arm64" => "ayg"
-    elsif OS.linux? && Hardware::CPU.intel?
-      bin.install "ayg-linux-amd64" => "ayg"
-    end
+    bin.install Dir["ayg-*"].first => "ayg"
   end
 
   test do
