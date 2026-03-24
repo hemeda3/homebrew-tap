@@ -8,7 +8,7 @@ class Ayg < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "build", "--release"
     bin.install "target/release/ayg"
   end
 
