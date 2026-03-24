@@ -11,7 +11,7 @@ class Ayg < Formula
     end
     on_intel do
       url "https://github.com/hemeda3/aygrep/releases/download/v0.1.0/ayg-macos-amd64"
-      sha256 "41af12f2585c95d6a4240e20e0fa70e7ed009b3f77ac264d501316156c8ec8ef"
+      sha256 "89a895e1e14876f05b00d0ad29a24f231f831c82adce9ea148fa9149fe4ac286"
     end
   end
 
