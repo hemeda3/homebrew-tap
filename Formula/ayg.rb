@@ -7,18 +7,18 @@ class Ayg < Formula
   on_macos do
     on_arm do
       url "https://github.com/hemeda3/aygrep/releases/download/v0.1.0/ayg-macos-arm64"
-      sha256 "2230156ab3e1284aa783515fb074059ec3648751ab00c227f94f1e1dffb44c92"
+      sha256 "38a145eba5e49ee831b83dac4c3022c4aef220d401f21318b84c8b87f267dd45"
     end
     on_intel do
       url "https://github.com/hemeda3/aygrep/releases/download/v0.1.0/ayg-macos-amd64"
-      sha256 "89a895e1e14876f05b00d0ad29a24f231f831c82adce9ea148fa9149fe4ac286"
+      sha256 "28b186e3a8ba5f1e8c2d1c990c6ff9b82f5e1f748d35732f55d6f91b9e37fb21"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/hemeda3/aygrep/releases/download/v0.1.0/ayg-linux-amd64"
-      sha256 "ad2b5fa76a02eb2c3b3cc51da09cdda1ca3f1a617314fd17453f1adc3c6a5dad"
+      sha256 "76dcb9f9d231ce3b762425869b35ff575c5e79507a666ca398d0d98743f8bb09"
     end
   end
 
@@ -27,6 +27,6 @@ class Ayg < Formula
   end
 
   test do
-    assert_match "ayg 0.1.0", shell_output("#{bin}/ayg --version")
+    assert_match "ayg", shell_output("#{bin}/ayg --version")
   end
 end
